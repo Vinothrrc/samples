@@ -1,0 +1,15 @@
+/* App component styles */
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Global styling adjustments for the app */
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
