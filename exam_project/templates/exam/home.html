@@ -1,0 +1,149 @@
+{% extends 'exam/base.html' %}
+
+{% block title %}Home - Online Exam System{% endblock %}
+
+{% block content %}
+<div class="hero-section bg-primary text-white py-5 mb-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-3">Welcome to Online Exam System</h1>
+                <p class="lead mb-4">A comprehensive platform for conducting online examinations with secure authentication, real-time monitoring, and detailed analytics.</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'register' %}" class="btn btn-light btn-lg">
+                        <i class="fas fa-user-plus"></i> Get Started
+                    </a>
+                    <a href="{% url 'login' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <i class="fas fa-graduation-cap" style="font-size: 200px; opacity: 0.1;"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+            <h2 class="display-6 fw-bold mb-3">Features</h2>
+            <p class="text-muted">Discover what makes our exam system unique and powerful</p>
+        </div>
+    </div>
+    
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-shield-alt text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5 class="card-title">Secure Authentication</h5>
+                    <p class="card-text text-muted">Built-in user authentication with role-based access control for students, teachers, and administrators.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-database text-success" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5 class="card-title">PostgreSQL Backend</h5>
+                    <p class="card-text text-muted">Robust PostgreSQL database ensures data integrity and supports complex queries for detailed analytics.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-clock text-warning" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5 class="card-title">Real-time Monitoring</h5>
+                    <p class="card-text text-muted">Live timer, automatic submission, and real-time progress tracking during examinations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-chart-line text-info" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5 class="card-title">Detailed Analytics</h5>
+                    <p class="card-text text-muted">Comprehensive reporting with performance analytics, grade distributions, and progress tracking.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-mobile-alt text-danger" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5 class="card-title">Mobile Responsive</h5>
+                    <p class="card-text text-muted">Fully responsive design that works seamlessly on desktop, tablet, and mobile devices.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-cogs text-secondary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5 class="card-title">Admin Panel</h5>
+                    <p class="card-text text-muted">Powerful Django admin interface for managing users, exams, questions, and system settings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <div class="card bg-light border-0">
+                <div class="card-body p-5">
+                    <h3 class="mb-3">Ready to Get Started?</h3>
+                    <p class="text-muted mb-4">Join thousands of students and educators who trust our platform for their examination needs.</p>
+                    <a href="{% url 'register' %}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i> Start Your Journey
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hero-section {
+        border-radius: 0 0 50px 50px;
+        margin-bottom: 50px !important;
+    }
+    
+    .feature-icon {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    }
+</style>
+{% endblock %}
